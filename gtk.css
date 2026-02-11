@@ -1,0 +1,393 @@
+/*
+
+YBAB Look Alike GnuCash 4.0+ settings
+
+*/
+
+@define-color   bright-red      #fb4934;
+@define-color   bright-green    #b8bb26;
+@define-color   bright-yellow   #fabd2f;
+@define-color   bright-blue     #83a598;
+@define-color   bright-purple   #d3869b;
+@define-color   bright-aqua     #8ec07c;
+@define-color   bright-orange   #fe8019;
+
+@define-color   neutral-red     #cc241d;
+@define-color   neutral-green   #98971a;
+@define-color   neutral-yellow  #d79921;
+@define-color   neutral-blue    #458588;
+@define-color   neutral-purple  #b16286;
+@define-color   neutral-aqua    #689d6a;
+@define-color   neutral-orange  #d65d0e;
+
+@define-color   faded-red       #9d0006;
+@define-color   faded-green     #79740e;
+@define-color   faded-yellow    #b57614;
+@define-color   faded-blue      #076678;
+@define-color   faded-purple    #8f3f71;
+@define-color   faded-aqua      #427b58;
+@define-color   faded-orange    #af3a03;
+
+@define-color	yellow          #b58900;
+@define-color	orange	        #cb4b16;
+@define-color	red	            #dc322f;
+@define-color	magenta	        #d33682;
+@define-color	violet	        #6c71c4;
+@define-color	blue	        #268bd2;
+@define-color	cyan	        #2aa198;
+@define-color	green           #859900;
+
+@define-color   scrollbar_slider_color      #839496; /* Medium Grey */
+@define-color   scrollbar_trough_color      #657B83; /* Darker Grey */
+@define-color   scrollbar_hover_color       #A8C6EE; /* Darker than Carolina Blue */
+@define-color   scrollbar_active_color      #586E75; /* Darker Grey */
+@define-color   register_header_fg_color    #fbfbfb; /* Really light grey */
+@define-color   register_header_bg_color    #647076; /* dark steel grey */
+@define-color   register_bg_color           #657b83; /* blue-grey */
+@define-color   register_text_color         #4A4A4A; /* ynab grey text */
+@define-color   register_primary_row        #EDF6FB; /* ynab light blue */
+@define-color   register_secondary_row      #FFFFFF; /* ynab white */
+@define-color   register_disabled_row       #657b83; /* light blue-grey */
+
+@define-color   account_list_bg_color       #A8C6EE; /* carolina blue */
+@define-color   highlight_color             #A8C6EE; /* carolina blue */
+@define-color   register_cursor_bg_split    #fff9b2; /* light yellow for split */
+@define-color   register_cursor_fg_split    #4A4A4A; /* ynab grey text */
+@define-color   register_cursor_bg_color    #faf2af; /* ynab yellow selection for cursor */
+@define-color   register_cursor_fg_color    #4A4A4A; /* ynab grey text */
+
+/* TEMPLATE */
+/* From Saolarized Theme as reference */
+/*
+GtkEntry  {
+  -gtkwidget-focus-line-width: 0;
+  -gtkentry-inner-border: 0;
+  -gtkentry-has-frame: false;
+  -gtkentry-separator-height: 0;
+}
+*/
+
+/*================== GENERAL ================== */
+/* Highlight Text */
+.gnc-class-highlight 
+{
+  background-color: @highlight_color;
+  color: @register_text_color;
+}
+
+selection 
+{
+  background-color: @highlight_color;
+  color: @register_text_color;
+}
+
+/* Negative number color */
+.gnc-class-negative-numbers 
+{
+  color: @bright-red;
+}
+
+/* Scrollbar trough (background track) */ 
+scrollbar 
+{ 
+  background-color: @scrollbar_trough_color;
+}
+
+/* Scollbar size */
+scrollbar slider
+{
+    background-color: @scrollbar_slider_color;
+
+    /* Size of the slider */
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 22px;
+
+    /* Padding around the slider */
+    border: 5px solid transparent;
+}
+
+scrollbar slider:hover 
+{
+  background-color: @scrollbar_hover_color;
+}
+
+scrollbar slider:active
+{
+  background-color: @scrollbar_active_color;
+}
+
+/* ================== MAIN ================== */
+/* Main Windows Title and Footer Bar */
+#gnc-id-main-window 
+{
+}
+
+/* Side bar (account tabs) or top bar (account tabs) area */
+#gnc-id-main-window notebook header 
+{
+  background-color: @account_list_bg_color;
+}
+
+/* Side bar (account tabs) or top bar (account tabs) area, Account Tabs*/
+#gnc-id-main-window notebook tab
+{
+/*
+  min-height: 0px;
+  min-width: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+*/
+/*
+  background-color: @magenta;
+*/
+}
+
+/* Account bar (account tabs) the actual tab label */
+#gnc-id-main-window notebook label
+{
+  font: 14px arial, sans-serif;
+/*
+  background-color: @faded-blue;
+*/
+}
+
+/* Account bar (account tabs) "x" buttons */
+#gnc-id-main-window notebook tab button
+{
+/*
+  min-height: 0;
+  min-width: 0;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+*/
+/*
+  background-color: @violet;
+*/
+}
+
+/* Area above the status bar */
+#gnc-id-account-page 
+{
+/*
+  background-color: #4B9CD3;
+*/ /* ynab app blue */
+}
+
+#gnc-id-account-tree:hover 
+{
+/*
+  background-color: #657B83;
+*/ /* dark grey */
+}
+
+#gnc-id-account-tree 
+{
+/*  color: #4A4A4A;*/ /* ynab grey */
+/*  background-color: #EDF6FB; *//* light blue */
+}
+
+/*
+#gnc-id-main-window menubar 
+{
+  color: @000000;
+  background-color: #4B9CD3;
+  outline-width: 0px;
+  border-width: 0px;
+}
+
+gnc-id-sheet-list treeview {
+  background-color: @bg_highlight;
+  color: @fg_highlight;
+}
+
+gnc-id-sheet-list treeview:hover {
+  border-style: solid;
+  border-width: 1px;
+  border-color: @fg_highlight;
+  background-color: @bg_color;
+}
+*/
+
+/* ================== SUMMARY BAR  ================== */
+/* Summary bar for each acouunt view, not accounts list */
+#gnc-id-summarybar
+{
+  color: @register_header_fg_color;
+  background-color: @register_header_bg_color;
+}
+
+#gnc-id-summarybar .gnc-class-highlight
+{
+  color: @bright-red;
+  background-color: @register_header_bg_color;
+}
+
+/* ================== RECONCILE ================== */
+#gnc-id-reconcile-totals *
+{
+}
+
+.gnc-class-credits treeview
+{
+  background-color: @register_primary_row;
+  color: @register_text_color;
+}
+
+.gnc-class-credits treeview:selected
+{
+  background-color: @highlight_color;
+  color: @register_text_color;
+}
+
+.gnc-class-debits treeview
+{
+  background-color: @register_primary_row;
+  color: @register_text_color;
+}
+
+.gnc-class-debits treeview:selected
+{
+  background-color: @highlight_color;
+  color: @register_text_color;
+}
+
+/* ================== REGISTER ================== */
+/* Register sheet font setting */
+gnc-id-sheet 
+{
+  border-width: 0px;
+  outline-width: 0px;
+  font: 11x arial;
+}
+
+.gnc-class-register-foreground 
+{
+  color: inherit;
+}
+
+gnc-id-cursor entry 
+{
+  background-color: @register_cursor_bg_split;
+  color: @register_cursor_fg_split;
+}
+
+gnc-id-cursor entry undershoot 
+{
+  background-color: @register_cursor_bg_split;
+  color: @register_cursor_fg_split;
+}
+
+gnc-id-cursor widget 
+{
+  color: inherit;
+  background-color: inherit;
+  border-color: inherit;
+}
+
+/* Register header font setting */
+gnc-id-header 
+{
+  color: @register_header_fg_color;
+  background-color: @register_header_bg_color;
+}
+
+/* Register sheet calendar */
+gnc-id-sheet calendar
+{
+  border-width: 1px;
+}
+
+/* Register User Colors, remove 'user' for builtin register values */
+/*.gnc-class-register-header 
+{
+  color: @yellow;
+  background-color: @bg_highlight;
+}
+*/
+.gnc-class-register-primary 
+{
+  color: @register_text_color;
+  background-color: @register_primary_row;
+}
+
+.gnc-class-register-primary:disabled 
+{
+  color: mix (@register_text_color, @register_disabled_row, 0.5);
+  background-color: mix (@register_primary_row, @register_disabled_row, 0.5);
+}
+
+.gnc-class-register-secondary 
+{
+  color: @register_text_color;
+  background-color: @register_secondary_row;
+}
+
+.gnc-class-register-secondary:disabled 
+{
+  color: mix (@register_text_color, @register_disabled_row, 0.5);
+  background-color: mix (@register_secondary_row, @register_disabled_row, 0.5);
+}
+
+.gnc-class-register-split 
+{
+  color: @register_cursor_fg_split;
+  background-color: @register_cursor_bg_split;
+}
+
+.gnc-class-register-split:disabled 
+{
+  color: mix (@register_cursor_fg_split, @register_disabled_row, 0.5);
+  background-color: mix (@register_cursor_bg_split, @register_disabled_row, 0.5);
+}
+
+.gnc-class-register-cursor 
+{
+  background-color: @register_cursor_bg_color;
+  color: @register_cursor_fg_color;
+}
+
+/* ================== BUTTONS ================== */
+
+gnc-id-cursor button 
+{
+  color: inherit;
+  background-color: inherit;
+  border-color: inherit;
+  border-width: 1px;
+}
+
+/* ================== DIALOGS ================== */
+
+dialog #gnc-id-account-tree 
+{
+  background-color: @bg_02;
+}
+
+/* ================== GENERIC ================== */
+
+#gnc-id-account notebook header 
+{
+  background-color: @bg_02;
+}
+
+#gnc-id-commodity 
+{
+  background-color: @bg_color;
+}
+
+#gnc-id-preferences stack 
+{
+  background-color: @bg_02;
+}
+
+#gnc-id-preferences tabs 
+{
+  background-color: @bg_color;
+}
+
