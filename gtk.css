@@ -1,6 +1,7 @@
 /*
 
 YBAB Look Alike GnuCash 4.0+ settings
+Author: RallyRabbit
 
 */
 
@@ -48,6 +49,7 @@ YBAB Look Alike GnuCash 4.0+ settings
 @define-color   register_primary_row        #EDF6FB; /* ynab light blue */
 @define-color   register_secondary_row      #FFFFFF; /* ynab white */
 @define-color   register_disabled_row       #657b83; /* light blue-grey */
+@define-color   color-safe-red              #D32F2F;
 
 @define-color   account_list_bg_color       #A8C6EE; /* carolina blue */
 @define-color   highlight_color             #A8C6EE; /* carolina blue */
@@ -84,7 +86,7 @@ selection
 /* Negative number color */
 .gnc-class-negative-numbers 
 {
-  color: @bright-red;
+  color: @color-safe-red;
 }
 
 /* Scrollbar trough (background track) */ 
@@ -171,27 +173,6 @@ scrollbar slider:active
 */
 }
 
-/* Area above the status bar */
-#gnc-id-account-page 
-{
-/*
-  background-color: #4B9CD3;
-*/ /* ynab app blue */
-}
-
-#gnc-id-account-tree:hover 
-{
-/*
-  background-color: #657B83;
-*/ /* dark grey */
-}
-
-#gnc-id-account-tree 
-{
-/*  color: #4A4A4A;*/ /* ynab grey */
-/*  background-color: #EDF6FB; *//* light blue */
-}
-
 /*
 #gnc-id-main-window menubar 
 {
@@ -212,20 +193,58 @@ gnc-id-sheet-list treeview:hover {
   border-color: @fg_highlight;
   background-color: @bg_color;
 }
+*
+
+/* ================== ACCOUNT TREE VIEW ================== */
+/* Account List Area above the bottom account list status bar */
+#gnc-id-account-page 
+{
+  background-color: @account_list_bg_color;
+}
+
+#gnc-id-account-page-tab-box
+{
+}
+
+/* Mouseover Account Name */
+#gnc-id-account-tree:hover 
+{
+/*
+  background-color: @highlight_color;
 */
+}
+
+/* Account List Selected Account Name */
+#gnc-id-account-tree:selected
+{
+  color: @register_text_color;
+  background-color: @highlight_color;
+}
+
+/* Account List background color */
+#gnc-id-account-tree 
+{
+  color: @register_text_color;
+  background-color: @register_primary_row;
+}
+
+/* Account List summary bar (bottom) */
+#gnc-id-account-summary-bar
+{
+}
 
 /* ================== SUMMARY BAR  ================== */
 /* Summary bar for each acouunt view, not accounts list */
 #gnc-id-summarybar
 {
-  color: @register_header_fg_color;
-  background-color: @register_header_bg_color;
+  color: @register_text_color;
+  background-color: @account_list_bg_color;
 }
 
 #gnc-id-summarybar .gnc-class-highlight
 {
-  color: @bright-red;
-  background-color: @register_header_bg_color;
+  color: @color-safe-red;
+  background-color: @account_list_bg_color;
 }
 
 /* ================== RECONCILE ================== */
