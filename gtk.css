@@ -173,6 +173,13 @@ scrollbar slider:active
 */
 }
 
+/* Account bar button when selected (outline) */
+#gnc-id-main-window notebook tab:checked, tab:checked
+{
+  background-color: @register_header_bg_color;
+}
+
+
 /*
 #gnc-id-main-window menubar 
 {
