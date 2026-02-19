@@ -69,6 +69,10 @@ GtkEntry  {
 }
 */
 
+/*================== GLOBAL ================== */
+*{ font: 20px "Segoe UI"; }
+
+/*================== GNUCASH ================== */
 /*================== GENERAL ================== */
 /* Highlight Text */
 .gnc-class-highlight 
@@ -289,8 +293,11 @@ gnc-id-sheet
 {
   border-width: 0px;
   outline-width: 0px;
-  font: 11x arial;
+  font-family: "Segoe UI" !important;
+  font-size: 20pt !important;
 }
+
+treeview text { font-family: "Segoe UI"; font-size: 18pt; }
 
 .gnc-class-register-foreground 
 {
@@ -321,6 +328,7 @@ gnc-id-header
 {
   color: @register_header_fg_color;
   background-color: @register_header_bg_color;
+  font-weight: bold;
 }
 
 /* Register sheet calendar */
