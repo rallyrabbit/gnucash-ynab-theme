@@ -16,6 +16,7 @@ By: Adam Oldham (RallyRabbit)
 
 # Wants
 
+- Iwant teh css in one file but the theme won't work the the css in GNUCash and Fonts won't work in the theme file and I can't figure out why yet
 - Summary row simpler (less data) with balance highlighted
 - Change position of deposit and withdrawl columns by default
 - Keep working to find ways to do oter dialogs and windows
